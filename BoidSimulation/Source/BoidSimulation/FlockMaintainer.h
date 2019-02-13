@@ -85,10 +85,12 @@ public:
 	//Returns the average velocity of the flock
 	FVector getAverageVelocity();
 	//Computes cohesion for the flock
-	FVector cohesion();
+	FVector cohesion(ABoid* boid);
 	//Computes alignment for the flock
-	FVector alignment();
+	FVector alignment(ABoid* boid);
 	//Computes avoidance for the flock
-	FVector avoidance();
+	FVector avoidance(ABoid* boid);
+	//Maintain the boundary conditions
+	FVector boundaryHandler(ABoid* boid);
 
 };

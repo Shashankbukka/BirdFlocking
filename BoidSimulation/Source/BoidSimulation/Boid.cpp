@@ -19,7 +19,10 @@ ABoid::ABoid()
 	mesh->SetStaticMesh(boidMesh.Object);
 	mesh->SetMaterial(0,boidMaterial.Object);
 
+	mesh->SetWorldScale3D(FVector(0.2f, 0.2f, 0.5f));
+
 	RootComponent = mesh;
+	UE_LOG(LogTemp, Warning, TEXT("BOID CONSTRUCTOR"));
 }
 
 // Called when the game starts or when spawned
